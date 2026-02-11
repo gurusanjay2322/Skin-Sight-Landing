@@ -7,6 +7,8 @@ import HowItWorks from './components/HowItWorks'
 import Technology from './components/Technology'
 import Gallery from './components/Gallery'
 import Privacy from './components/Privacy'
+import GetApp from './components/GetApp'
+import MedicalDisclaimer from './components/MedicalDisclaimer'
 import Footer from './components/Footer'
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       <Technology />
       <Gallery />
       <Privacy />
+      <GetApp />
+      <MedicalDisclaimer />
       <Footer />
     </div>
   )

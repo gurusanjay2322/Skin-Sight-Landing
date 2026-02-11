@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import apkUrl from '../assets/application-3922bfc7-1f2f-47f6-ba65-76613f7d7a50.apk'
 
 const Hero = () => {
   return (
@@ -37,6 +38,22 @@ const Hero = () => {
               Get instant, evidence-backed skin analysis combined with real-time environmental context. 
               Your personal dermatology assistant, powered by AI.
             </p>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a
+                href={apkUrl}
+                download="SkinSight.apk"
+                className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-full font-bold text-lg shadow-lg hover:bg-primary-700 transition-colors"
+              >
+                <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download App
+              </a>
+            </motion.div>
           </motion.div>
 
           <motion.div

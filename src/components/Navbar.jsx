@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import apkUrl from '../assets/application-3922bfc7-1f2f-47f6-ba65-76613f7d7a50.apk'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -49,12 +50,35 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(item.href).scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }}
               >
                 {item.name}
               </a>
             ))}
+            
+            <a
+              href={apkUrl}
+              download="SkinSight.apk"
+              className="px-5 py-2.5 bg-primary-600 text-white rounded-full font-semibold hover:bg-primary-700 transition-colors shadow-md"
+            >
+              Download
+            </a>
           </div>
 
+          <div className="flex items-center md:hidden gap-4">
+            <a
+              href={apkUrl}
+              download="SkinSight.apk"
+              className="px-4 py-2 bg-primary-600 text-white rounded-full font-semibold text-sm hover:bg-primary-700 transition-colors shadow-md"
+            >
+              Download
+            </a>
+            
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -76,6 +100,7 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
+      </div>
 
         {mobileMenuOpen && (
           <motion.div
