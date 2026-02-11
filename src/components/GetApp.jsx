@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-const apkUrl = "https://github.com/Yogesh251103/openai-skinsight/releases/download/v1.0.0/application-3922bfc7-1f2f-47f6-ba65-76613f7d7a50.apk"
+const apkUrl = "https://github.com/gurusanjay2322/SkingSight_Mobile/releases/download/v1.0.0/application-3922bfc7-1f2f-47f6-ba65-76613f7d7a50.apk"
 
 const GetApp = () => {
   return (
